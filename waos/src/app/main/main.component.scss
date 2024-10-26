@@ -1,0 +1,116 @@
+.contenido {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden; 
+}
+
+.fondo-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; 
+  overflow: hidden;
+}
+
+.fondo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7); 
+  padding: 15px 0;
+  text-align: center;
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.navbar ul li {
+  display: inline;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 15px;
+  transition: background 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+}
+
+.logo-container {
+  position: sticky;
+  top: 20px; 
+  z-index: 1;
+  margin-top: 0;
+  text-align: center;
+}
+
+.logo {
+  width: 380px;
+  height: auto;
+  display: inline-block;
+}
+
+.buscador {
+  margin-top: 20px;
+}
+
+.buscador input {
+  padding: 10px;
+  font-size: 16px;
+  width: 300px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.smoothie-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Espacio entre las tarjetas */
+  justify-content: center; /* Centra las tarjetas */
+  max-width: 80%;
+  margin: auto;
+}
+
+.smoothie-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+  width: 200px;
+  transition: transform 0.2s;
+}
+
+.smoothie-card:hover {
+  transform: scale(1.05);
+}
+
+.smoothie-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}

@@ -1,0 +1,21 @@
+<div class="add-smoothie-container">
+    <div class="fondo-container">
+        <img src="fondoxd.jpg" alt="Fondo" class="fondo">
+    </div>
+    <div class="contenido">
+        <h2>Agregar un Smoothie</h2>
+        <form (submit)="onSubmit($event)">
+            <div class="form-group">
+                <label for="smoothie-name">Smoothie Name:</label>
+                <input type="text" id="smoothie-name" name="smoothie-name" placeholder="Ingrese el nombre del smoothie" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="smoothie-image">Product Image:</label>
+                <input type="file" id="smoothie-image" name="smoothie-image" accept="image/*" required>
+            </div>
+        
+            <button type="submit" class="add-btn">Add Smoothie</button>
+        </form>        
+    </div>
+</div>

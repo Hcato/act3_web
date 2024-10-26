@@ -1,0 +1,12 @@
+<h1 mat-dialog-title class="dialog-title">{{ data.message }}</h1>
+<div mat-dialog-content class="dialog-content">
+  <mat-form-field appearance="fill" class="dialog-form-field">
+    <mat-label>Nombre</mat-label>
+    <input matInput [(ngModel)]="name">
+  </mat-form-field>
+  <input type="file" class="file-input" (change)="onFileSelected($event)">
+</div>
+<div mat-dialog-actions class="dialog-actions">
+  <button mat-button (click)="closeDialog()">Cancelar</button>
+  <button mat-button color="primary" (click)="updateSmoothie()">Guardar</button>
+</div>

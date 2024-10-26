@@ -1,0 +1,33 @@
+<div class="contenido">
+    <div class="fondo-container">
+      <img src="fondoxd.jpg" alt="Fondo" class="fondo">
+    </div>
+  
+    <div class="logo-container">
+      <a href=""><img src="smoothie.png" alt="Logo" class="logo"></a>
+    </div>
+  
+    <div class="buscador">
+      <input
+        type="number"
+        placeholder="smoothie id"
+        [(ngModel)]="smoothieId"
+        class="input-buscar"
+      />
+      <button (click)="buscarSmoothie()">Buscar</button>
+    </div>
+  
+    <div class="resultados">
+      @if (smoothie) {
+        <div class="card">
+        <h2>{{ smoothie.name }}</h2>
+        <img [src]="smoothie.image" alt="Smoothie Image" class="smoothie-image">
+      </div>
+      }
+    </div>
+  
+    <div class="error">
+      @if (errorMessage) {<p>{{ errorMessage }}</p>}
+    </div>
+  </div>
+  

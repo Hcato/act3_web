@@ -1,0 +1,122 @@
+/* Estilos generales */
+.contenido {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Para alinear elementos al inicio */
+  align-items: center;
+  position: relative;
+  overflow: hidden; /* Para evitar desbordes del fondo */
+}
+
+/* Contenedor de la imagen de fondo */
+.fondo-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Envía el fondo detrás de todo el contenido */
+  overflow: hidden;
+}
+
+.fondo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Asegura que la imagen de fondo cubra todo el contenedor */
+}
+
+/* Estilos para la barra de navegación */
+.navbar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
+  padding: 15px 0;
+  text-align: center;
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Espaciado entre los elementos */
+}
+
+.navbar ul li {
+  display: inline;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 15px;
+  transition: background 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.2); 
+  border-radius: 5px;
+}
+
+/* Contenedor del logo */
+.logo-container {
+  position: relative;
+  top: 20px; /* Ajusta este valor para mover el logo un poco más arriba */
+  z-index: 1;
+  text-align: center;
+  margin-bottom: 10px; /* Espacio adicional debajo del logo si es necesario */
+}
+
+.logo {
+  width: 380px;
+  height: auto;
+  display: inline-block;
+}
+
+/* Centrado del input */
+.buscador {
+  margin-top: 20px; /* Para ajustar la distancia desde el logo */
+}
+
+.buscador input {
+  padding: 10px;
+  font-size: 16px;
+  width: 300px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Estilos de la imagen del smoothie */
+.smoothie-image {
+  width: 300px;
+  height: auto;
+}
+
+/* Card para cada smoothie */
+.card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+  width: 300px;
+  transition: transform 0.2s;
+  margin: 20px; /* Añade espacio alrededor de cada card */
+}
+
+/* Contenedor para las cards */
+.smoothie-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px; /* Ajusta la distancia entre el buscador y las cards */
+  max-height: 60%; /* Limita el tamaño máximo del contenedor de cards */
+  overflow-y: auto; /* Permite desplazamiento si las cards son demasiadas */
+}
