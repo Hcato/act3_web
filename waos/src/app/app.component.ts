@@ -5,12 +5,12 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { SocketService } from '../services/sockets/socket.service';
 import { ErrorInterceptor } from '../404\'s/httperror.interceptor';
 import { DialogerrorComponent } from './dialogerror/dialogerror.component';
-import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpClientModule,HTTP_INTERCEPTORS } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, MainComponent, RouterLink, MatDialogModule, DialogerrorComponent],
+  imports: [RouterOutlet, MainComponent, RouterLink, MatDialogModule, DialogerrorComponent,HttpClientModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
   providers: [

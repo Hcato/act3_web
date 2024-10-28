@@ -3,10 +3,11 @@ import { MatDialog } from '@angular/material/dialog';
 import { DmodificarComponent } from '../dmodificar/dmodificar.component';
 import { GetsService } from '../../services/gets.service';
 import { FormsModule } from '@angular/forms';
+import { HttpModule } from '../https/https.module';
 @Component({
   selector: 'app-mod',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, HttpModule],
   templateUrl: './mod.component.html',
   styleUrl: './mod.component.scss'
 })

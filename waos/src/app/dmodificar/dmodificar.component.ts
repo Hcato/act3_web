@@ -4,11 +4,12 @@ import { GetsService } from '../../services/gets.service';
 import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { HttpModule } from '../https/https.module';
 
 @Component({
   selector: 'app-dmodificar',
   standalone: true,
-  imports: [FormsModule,MatFormFieldModule, MatInputModule],
+  imports: [FormsModule,MatFormFieldModule, MatInputModule, HttpModule],
   templateUrl: './dmodificar.component.html',
   styleUrl: './dmodificar.component.scss'
 })

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpInterceptor, HttpRequest, HttpHandler, HttpEvent, HttpErrorResponse, HttpInterceptorFn } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
-import { catchError } from 'rxjs/operators';
+import { catchError, delay } from 'rxjs/operators';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogerrorComponent } from '../app/dialogerror/dialogerror.component';
 
@@ -12,11 +12,16 @@ export const httperrorInterceptor: HttpInterceptorFn = (req, next) => {
 @Injectable()
 export class ErrorInterceptor implements HttpInterceptor {
 
-  constructor(private dialog: MatDialog) { }
+  constructor(private dialog: MatDialog) {
+    console.log("un saludo a la grasa");
+    
+   }
 
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     return next.handle(req).pipe(
+      delay(2000),
       catchError((error: HttpErrorResponse) => {
+        console.log('Interceptor capturando error:', error);
         let errorMessage = '';
 
         if (error.error instanceof ErrorEvent) {
